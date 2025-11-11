@@ -1,17 +1,17 @@
-# tiny-raise
+# ensured
 
 > a tiny raise function
 
 ## Install
 
 ```sh
-npm install tiny-raise
+npm install ensured
 ```
 
 ## Usage
 
 ```js
-import { main } from 'tiny-raise';
+import { main } from 'ensured';
 
 main('hi');
 //=> 'hello
@@ -19,7 +19,7 @@ main('hi');
 
 ## API
 
-### tiny-raise(input, options?)
+### ensured(input, options?)
 
 #### input
 
