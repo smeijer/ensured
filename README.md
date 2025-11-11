@@ -17,10 +17,13 @@ npm install ensured
 ## Usage
 
 ```ts
-import { ensure, expect, unreachable } from 'ensured';
+import { ensure, reject, expect, unreachable } from 'ensured';
 
 // ensure — checks truthiness
 ensure(count > 0, 'count must be positive');
+
+// reject — asserts falsiness
+reject(isAdmin, 'admins are not allowed here');
 
 // expect — checks non-nullishness
 const user = expect(currentUser, 'no current user');
@@ -47,6 +50,14 @@ Throws if `condition` is falsy.
 
 ```ts
 ensure(result.ok, new Error('request failed'));
+````
+
+### `reject(condition: unknown, error?: ErrorParam): asserts condition is false`
+
+Throws if `condition` is truthy. This is the inverse of `ensure` and is handy when something must not happen.
+
+```ts
+reject(user.isBanned, 'banned users cannot perform this action');
 ````
 
 ### `expect<Value>(value: Value | null | undefined, error?: ErrorParam): NonNullable<Value>`

@@ -12,6 +12,11 @@ export function ensure(condition: unknown, error?: ErrorParam): asserts conditio
 	throw toError(error);
 }
 
+export function reject(condition: unknown, error?: ErrorParam): asserts condition is false {
+	if (!condition) return;
+	throw toError(error);
+}
+
 export function expect<Value>(value: Value | null | undefined, error?: ErrorParam): Value {
 	ensure(value != null, error);
 	return value as NonNullable<Value>;

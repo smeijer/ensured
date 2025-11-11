@@ -1,6 +1,6 @@
 {
 	"name": "ensured",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Tiny runtime assertions that preserve error messages in production.",
 	"license": "MIT",
 	"repository": "smeijer/ensured",
