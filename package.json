@@ -27,7 +27,7 @@
 	},
 	"scripts": {
 		"test": "prettier -w . && eslint . --fix && jest",
-		"build": "rimraf ./dist && tsc -p tsconfig.build.json",
+		"build": "tshy",
 		"prepare": "npm run build"
 	},
 	"files": [
