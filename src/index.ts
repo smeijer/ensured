@@ -7,13 +7,13 @@ function toError(input: ErrorParam | undefined): Error {
 	return typeof v === 'string' ? new Error(v) : v;
 }
 
-export function assert(condition: unknown, error?: ErrorParam): asserts condition {
+export function ensure(condition: unknown, error?: ErrorParam): asserts condition {
 	if (condition) return;
 	throw toError(error);
 }
 
 export function expect<Value>(value: Value | null | undefined, error?: ErrorParam): Value {
-	assert(value != null, error);
+	ensure(value != null, error);
 	return value as NonNullable<Value>;
 }
 

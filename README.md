@@ -17,10 +17,10 @@ npm install ensured
 ## Usage
 
 ```ts
-import { assert, expect, unreachable } from 'ensured';
+import { ensure, expect, unreachable } from 'ensured';
 
-// assert — checks truthiness
-assert(count > 0, 'count must be positive');
+// ensure — checks truthiness
+ensure(count > 0, 'count must be positive');
 
 // expect — checks non-nullishness
 const user = expect(currentUser, 'no current user');
@@ -41,12 +41,12 @@ If you pass an existing `Error`, it will be rethrown unchanged.
 
 ## API
 
-### `assert(condition: unknown, error?: ErrorParam): asserts condition`
+### `ensure(condition: unknown, error?: ErrorParam): asserts condition`
 
 Throws if `condition` is falsy.
 
 ```ts
-assert(result.ok, new Error('request failed'));
+ensure(result.ok, new Error('request failed'));
 ````
 
 ### `expect<Value>(value: Value | null | undefined, error?: ErrorParam): NonNullable<Value>`
@@ -78,7 +78,7 @@ type ErrorParam = Error | string | (() => Error | string);
 This allows lazy construction for expensive messages:
 
 ```ts
-assert(isValid, () => new Error(`Invalid item: ${JSON.stringify(item)}`));
+ensure(isValid, () => new Error(`Invalid item: ${JSON.stringify(item)}`));
 ````
 
 ## Why not strip messages?
