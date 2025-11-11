@@ -1,7 +1,7 @@
 {
 	"name": "ensured",
-	"version": "0.0.1",
-	"description": "a tiny raise function",
+	"version": "0.0.2",
+	"description": "Tiny runtime assertions that preserve error messages in production.",
 	"license": "MIT",
 	"repository": "smeijer/ensured",
 	"funding": "https://github.com/smeijer/ensured?sponsor=1",
