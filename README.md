@@ -12,7 +12,7 @@ Tiny runtime assertions that never drop your error messages.
 
 ```bash
 npm install ensured
-`````
+```
 
 ## Usage
 
