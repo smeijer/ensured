@@ -23,7 +23,7 @@
 		}
 	},
 	"engines": {
-		"node": ">=16"
+		"node": ">=20"
 	},
 	"scripts": {
 		"test": "prettier -w . && eslint . --fix && jest",
