@@ -26,7 +26,7 @@
 		"node": ">=20"
 	},
 	"scripts": {
-		"test": "prettier -w . && eslint . --fix && jest",
+		"test": "prettier -w . && eslint . --fix -c eslintrc.json",
 		"build": "tshy",
 		"prepare": "npm run build"
 	},

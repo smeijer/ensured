@@ -19,7 +19,7 @@ export function reject(condition: unknown, error?: ErrorParam): asserts conditio
 
 export function expect<Value>(value: Value | null | undefined, error?: ErrorParam): Value {
 	ensure(value != null, error);
-	return value as NonNullable<Value>;
+	return value;
 }
 
 export function unreachable(error?: ErrorParam): never;
